@@ -42,3 +42,8 @@ callback = EarlyStopping(
     restore_best_weights = True
 )
 
+#--------------------------------------PLOTTING MODELS--------------------------------------------------------------------------#
+
+from keras.utils import plot_model
+plot_model(model, show_shapes=true, show_trainable=True)
+
