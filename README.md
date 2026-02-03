@@ -1,8 +1,16 @@
 # CNN-Architectures
-A Cats vs Dogs classification which explore all the possible architecture to find the best model available
+A Race classification which explore all the possible architecture to find the best model available
 
 The models that we will use for this text will be:
-- A Randon(A control for this test)
+- A Random(A control for this test)
+- Model with extra layers and methods like Dropout, Regularization etc
 - A hypertuned version(will use keras.hypertuning library)
 - Pretrained models(ResNet, VGG16)
+
+About Dataset:
+- The dataset was provided in kaggle with images of humans belonging to 3 races
+      Caucasian
+      Mongoloid
+      Negroid
+  - Train and test Data has 1651 and 74 files respectively belonging to 3 classes.
 
