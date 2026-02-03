@@ -1,0 +1,44 @@
+#------------------------------------------REQUIRED LIBRARIES-------------------------------------------------------------------#
+import tensorflow as tf
+from tensorflow import keras
+from keras import Sequential
+from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, BatchNormalization, Dropout, MaxPooling2D, BatchNormalization
+
+#-----------------------------------------DATASET EXTRACTION---------------------------------------------------------------------#
+
+train_ds = keras.utils.image_dataset_from_directory(
+    directory = '/kaggle/input/race-classifiction/Racist/Train',
+    labels='inferred',
+    label_mode='int',
+    batch_size = 32,
+    image_size = (256,256)
+)
+test_ds = keras.utils.image_dataset_from_directory(
+    directory = '/kaggle/input/race-classifiction/Racist/Test',
+    labels = 'inferred',
+    label_mode = 'int',
+    batch_size = 32,
+    image_size = (256,256)
+)
+
+#------------------------------------DATA NORMALISATION-------------------------------------------------------------------------#
+
+def normalise(image, label):
+    image = tf.cast(image/255, tf.float32)
+    return image, label
+
+train_ds = train_ds.map(normalise)
+test_ds = test_ds.map(normalise)
+
+#--------------------------------------EARLY STOPPING(TO PREVENT OVERFITTING)-----------------------------------------------------#
+
+from keras.callbacks import EarlyStopping
+callback = EarlyStopping(
+    monitor = 'val_loss',
+    min_delta = 0.001,
+    patience =10,
+    verbose = True,
+    mode = 'auto',
+    restore_best_weights = True
+)
+
