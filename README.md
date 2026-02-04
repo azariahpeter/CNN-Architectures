@@ -2,9 +2,10 @@
 A Race classification which explore all the possible architecture to find the best model available
 
 The models that we will use for this text will be:
-- A Random(A control for this test)
-- Model with extra layers and methods like Dropout, Regularization etc
-- A hypertuned version(will use keras.hypertuning library)
+- Model_1 : A Random(A control for this test)
+- Model_2 : Model with extra layers and methods like Dropout, MaxPooling2D, LeakyReLU etc
+- Model_3 : Using VGG16 as convolutional base
+- Model_4 : Using VGG19 as convolutional base
 - Pretrained models(ResNet, VGG16)
 
 About Dataset:
