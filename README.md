@@ -20,11 +20,11 @@ Model Performances:
       - val_loss = 0.8837
       - val_accuracy = 0.6081
 - Model_2: Adding a few extra layers such as Dropout, MaxPooling, changing the activation function from 'ReLU' to 'LeakyReLu' greatly improved our results
-      - val_loss = 0.6309
-      - val_accuracy = 0.7568
+  - val_loss = 0.6309
+  - val_accuracy = 0.7568
 - Using the convolutional base of VGG16(untrainable) for our model did perform better than our baseline Model_1 but was not better than Model_2
-      - val_loss = 0.7126
-      - val__accuracy = 0.7432
+  - val_loss = 0.7126
+  - val__accuracy = 0.7432
 - Using the convolutional base of Resnet50V2(untrainable) for our model did perform better than our baseline Model_1 and VGG16 but still was not better than Model_2
-      - val_loss = 0.6770
-      - val_accuracy = 0.6892
+  - val_loss = 0.6770
+- val_accuracy = 0.6892
