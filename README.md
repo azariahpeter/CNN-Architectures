@@ -7,6 +7,7 @@ The models that we will use for this text will be:
 - Model_3 : Using VGG16 as convolutional base
 - Model_4 : Using ResNet50V2 as convolutional base
 - Model_5 : Using ResNet50V2 as convolutional base(trainable)
+- Model-6 : Implement Data Augmentation on the best model so far
 
 About Dataset:
 - The dataset was provided in kaggle with images of humans belonging to 3 races
@@ -31,3 +32,7 @@ Model Performances:
 - Model_5: Using the same convolutional base as ResNet50V2 however the last 5 layers were set to trainable. This model produced the best results so far.
   - val_loss = 0.3604
   - val_accuracy = 0.8784
+- Model_6: We applied Data Augmentation on the best model(Model_5). Results saw more improvement.
+  - val_loss = 0.2859
+  - val_accuracy = 0.9189
+
