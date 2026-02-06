@@ -6,7 +6,7 @@ The models that we will use for this text will be:
 - Model_2 : Model with extra layers and methods like Dropout, MaxPooling2D, LeakyReLU etc
 - Model_3 : Using VGG16 as convolutional base
 - Model_4 : Using ResNet50V2 as convolutional base
-- Pretrained models(ResNet, VGG16)
+- Model_5 : Using ResNet50V2 as convolutional base(trainable)
 
 About Dataset:
 - The dataset was provided in kaggle with images of humans belonging to 3 races
@@ -22,9 +22,12 @@ Model Performances:
 - Model_2: Adding a few extra layers such as Dropout, MaxPooling, changing the activation function from 'ReLU' to 'LeakyReLu' greatly improved our results
   - val_loss = 0.6309
   - val_accuracy = 0.7568
-- Using the convolutional base of VGG16(untrainable) for our model did perform better than our baseline Model_1 but was not better than Model_2
+- Model_3: Using the convolutional base of VGG16(untrainable) for our model did perform better than our baseline Model_1 but was not better than Model_2
   - val_loss = 0.7126
   - val__accuracy = 0.7432
-- Using the convolutional base of Resnet50V2(untrainable) for our model did perform better than our baseline Model_1 and VGG16 but still was not better than Model_2
+- Model_4: Using the convolutional base of Resnet50V2(untrainable) for our model did perform better than our baseline Model_1 and VGG16 but still was not better than Model_2
   - val_loss = 0.6770
   - val_accuracy = 0.6892
+- Model_5: Using the same convolutional base as ResNet50V2 however the last 5 layers were set to trainable. This model produced the best results so far.
+  - val_loss = 0.3604
+  - val_accuracy = 0.8784
